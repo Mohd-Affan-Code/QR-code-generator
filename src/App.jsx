@@ -7,7 +7,7 @@ import QRHeader from "./components/Header";
 function App() {
   const [text, setText] = useState("https://your-website.com");
   const [size, setSize] = useState(200);
-  const [margin, setMargin] = useState(2);
+  const [margin, setMargin] = useState(0);
   const [level, setLevel] = useState("M"); // L, M, Q, H
   const [bgColor, setBgColor] = useState("#ffffff");
   const [fgColor, setFgColor] = useState("#000000");
@@ -27,7 +27,7 @@ function App() {
   const handleReset = () => {
     setText("");
     setSize(200);
-    setMargin(2);
+    setMargin(0);
     setLevel("M");
     setBgColor("#ffffff");
     setFgColor("#000000");
@@ -50,9 +50,9 @@ function App() {
   console.log(text);
 
   return (
-    <>
+    <div className="min-h-screen">
       <QRHeader />
-      <div className="flex flex-wrap gap-7 justify-center items-center">
+      <div className="flex flex-wrap gap-5 justify-center max-w-5xl mx-auto items-center ">
         <LeftCom
           data={userData}
           handleReset={handleReset}
@@ -65,10 +65,11 @@ function App() {
           level={level}
           fgColor={fgColor}
           bgColor={bgColor}
+          margin={margin}
         />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
