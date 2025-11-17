@@ -68,6 +68,6 @@ npm run dev
 ```
 
 Your app will be available on:
-👉 **[http://localhost:5173]([http://localhost:5173](https://qrcode-webapp.netlify.app/))**
+👉 **[http://localhost:5173]((https://qrcode-webapp.netlify.app/))**
 
 ---
