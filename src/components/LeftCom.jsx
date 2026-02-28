@@ -32,7 +32,6 @@ function LeftCom({ data, handleReset, handleDownLoad }) {
   }
 
   const handleCopy = async () => {
-    console.log(data.text);
     if (!data.text) {
       alert("Nothing to copy — please enter text or URL first.");
       return;
@@ -65,7 +64,7 @@ function LeftCom({ data, handleReset, handleDownLoad }) {
     } catch (err) {
       console.error("All copy methods failed:", err);
       alert(
-        "Copy not available in this environment. Please select the text and copy manually."
+        "Copy not available in this environment. Please select the text and copy manually.",
       );
     }
   };
